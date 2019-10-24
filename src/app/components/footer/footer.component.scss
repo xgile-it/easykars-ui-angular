@@ -1,0 +1,17 @@
+footer{
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+    color:white;
+    position: relative;;
+    right: 0;
+    bottom:0;
+    left: 0;
+    
+}
+
+@media screen and (max-width:800px){
+    footer{
+        position: relative;
+    }
+}
