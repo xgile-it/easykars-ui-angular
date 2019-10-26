@@ -1,7 +1,72 @@
-nav {
-    float: left;
+@import "../../../assets/scss/main.scss";
+    /*float: left;
     width: 20%;
     height: 800px; 
     background: #ccc;
     padding: 20px;
-  }
+  }**/
+ 
+
+/**{
+	box-sizing: border-box;
+}
+
+body {
+	font-family:'Rototo', sans-serif;
+	background: rgb(219, 221, 224);
+}*/
+
+#sideMenu {
+	background:#282639;
+    
+    width: 250px;
+    position: absolute;
+    top: 11ch;
+    height: 100%;
+    
+
+	nav {
+        padding-top: 20px;
+
+        a {
+            display: block;
+            color: #EAEDF3;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: 300;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background: #282639;
+                border-left: 5px solid #92CF48 ;
+                padding: 15px 30px 15px 25px;
+
+                .fa{
+                    color: #92CF48;
+    
+                }
+            }
+
+            .fa {
+                color: #EAEDF3;
+                font-size: 1.4rem;
+                margin-right: 0.8rem;
+                display: inline-block;
+                width: 30px;
+                position: relative;
+                top: 2px;
+
+            }
+          
+		&.active{
+           
+            background: #282639;
+            border-left: 5px solid #92CF48;
+            padding: 15px 30px 15px 25px;
+
+            }
+
+		}
+	}
+	
+}
