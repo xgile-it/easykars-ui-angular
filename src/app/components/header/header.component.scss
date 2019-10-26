@@ -5,6 +5,8 @@
     font-size: 20px;
     color: white;
     height: 100px;
+    display: flex; 
+    justify-content: space-between;
     
 }
 
@@ -17,6 +19,7 @@
 .menu{
     float: left;
     line-height: 100px;
+   
 }
 .side-menu{
     float: right;
@@ -42,7 +45,7 @@
 
 .show-menu-btn,.hide-menu-btn{
     transition: 0.4s;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     display: none;
 }

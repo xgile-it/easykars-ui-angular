@@ -16,6 +16,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { EnquiryComponent } from './pages/enquiry/enquiry.component';
+import { VehicleComponent } from './pages/vehicle/vehicle.component';
+import { OffersComponent } from './pages/offers/offers.component';
+import { RentalcarsComponent } from './pages/rentalcars/rentalcars.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +33,11 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     LoginComponent,
     RegisterComponent,
     AboutComponent,
-    ContactusComponent
+    ContactusComponent,
+    EnquiryComponent,
+    VehicleComponent,
+    OffersComponent,
+    RentalcarsComponent
   ],
   imports: [
     BrowserModule,

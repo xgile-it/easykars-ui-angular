@@ -9,6 +9,10 @@ import { ContactusComponent } from 'src/app/pages/contactus/contactus.component'
 import { AuthComponent } from 'src/app/layouts/auth/auth.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { CommonModule } from '@angular/common';
+import { VehicleComponent } from './pages/vehicle/vehicle.component';
+import { EnquiryComponent } from './pages/enquiry/enquiry.component';
+import { OffersComponent } from './pages/offers/offers.component';
+import { RentalcarsComponent } from './pages/rentalcars/rentalcars.component';
 
 
 const routes: Routes = [
@@ -20,7 +24,12 @@ const routes: Routes = [
       {path:'login', component:LoginComponent},
       {path:'register', component:RegisterComponent},
       {path:'about',component:AboutComponent},
-      {path:'contactus',component:ContactusComponent}
+      {path:'contactus',component:ContactusComponent},
+      {path:'vehicle',component:VehicleComponent},
+      {path:'enquiry',component:EnquiryComponent},
+      {path:'offers',component:OffersComponent},
+      {path:'rentalcars',component:RentalcarsComponent}
+
     ]
 
   },
