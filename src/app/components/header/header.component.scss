@@ -1,9 +1,12 @@
+@import "../../../assets/scss/main.scss";
+
+
 .header{
-    background-color: #34495e;
+    background-color:$purpledark;
     padding: 0 20px;
     text-align: center;
     font-size: 20px;
-    color: white;
+    color:$lightgrey;
     height: 100px;
     display: flex; 
     justify-content: space-between;
@@ -29,14 +32,14 @@
     font-size: 20px;
 }
 .log i{ 
-    color: #fff;
+    color: $lightgrey;
     line-height: 100px;
     font-size:30px;
     
 }
 
 .menu a{
-    color: #fff;
+    color:$lightgrey;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 10px;
@@ -59,7 +62,7 @@
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover{
-    color: #3498db;
+    color: $neongreen;
 }
 #chk{
     position: absolute;
@@ -75,7 +78,7 @@
         position: relative;
         width:100%;
        height: 80vh;
-        background: #2c3e50;
+        background: $purpledark;
         left: 50px;
         top:0;
         text-align: center;
