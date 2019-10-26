@@ -9,6 +9,7 @@ import { ContactusComponent } from 'src/app/pages/contactus/contactus.component'
 import { AuthComponent } from 'src/app/layouts/auth/auth.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { CommonModule } from '@angular/common';
+import { BookingComponent } from './pages/booking/booking.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path:'login', component:LoginComponent},
       {path:'register', component:RegisterComponent},
       {path:'about',component:AboutComponent},
-      {path:'contactus',component:ContactusComponent}
+      {path:'contactus',component:ContactusComponent},
+      {path: 'booking' , component:BookingComponent}
     ]
 
   },

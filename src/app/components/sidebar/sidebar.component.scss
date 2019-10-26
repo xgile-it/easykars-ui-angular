@@ -17,7 +17,7 @@ body {
 }*/
 
 #sideMenu {
-	background:#282639;
+	background:$purpledark;
     
     width: 250px;
     position: absolute;
@@ -30,25 +30,25 @@ body {
 
         a {
             display: block;
-            color: #EAEDF3;
+            color: $darkgrey;
             text-decoration: none;
             padding: 15px 30px;
             font-weight: 300;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background: #282639;
-                border-left: 5px solid #92CF48 ;
+                background: $purpledark;
+                border-left: 5px solid $neongreen ;
                 padding: 15px 30px 15px 25px;
 
                 .fa{
-                    color: #92CF48;
+                    color: $neongreen;
     
                 }
             }
 
             .fa {
-                color: #EAEDF3;
+                color: $darkgrey;
                 font-size: 1.4rem;
                 margin-right: 0.8rem;
                 display: inline-block;
@@ -60,8 +60,8 @@ body {
           
 		&.active{
            
-            background: #282639;
-            border-left: 5px solid #92CF48;
+            background: $purpledark;
+            border-left: 5px solid $neongreen;
             padding: 15px 30px 15px 25px;
 
             }

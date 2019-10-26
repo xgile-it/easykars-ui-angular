@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,9 +15,17 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { BookingComponent } from './pages/booking/booking.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//import { NgbdModalComponent } from './pages/booking/modal-components';
+import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
+    BookingComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
@@ -30,12 +37,22 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     RegisterComponent,
     AboutComponent,
     ContactusComponent
+    //NgbdModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    MaterialModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule
+    HttpClientModule,
+    MatButtonModule,
+    MatCardModule, 
+    MatMenuModule, 
+    MatToolbarModule, 
+    MatIconModule, 
+    MatSidenavModule, 
+    MatListModule, NgbModule, FormsModule
   
   ],
   providers: [],
