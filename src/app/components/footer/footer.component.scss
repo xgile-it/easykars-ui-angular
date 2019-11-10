@@ -1,180 +1,99 @@
 @import "../../../assets/scss/main.scss";
 
+footer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: $lightgrey;
+  padding-left: 20px;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-footer{
-	position: relative;
-	bottom: 0;
-}
-.footer-distributed{
-	background-color:$purpledark;
-	box-shadow: 0 1px 1px 0 $lightgrey;
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 20px sans-serif;
- 
-	padding: 55px 50px;
-	margin-top: 80px;
-}
- 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-	vertical-align: top;
-}
- 
-.footer-distributed .footer-left{
+  .footer-distributed {
+    box-shadow: 0 1px 1px 0 $lightgrey;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 15px sans-serif;
+
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .footer-left {
     width: 40%;
-    text-decoration-color: $lightgrey;
-}
- 
-.footer-distributed h3{
-	color: $lightgrey;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
- 
-.footer-diszstributed h3 span{
-	color: $neongreen;
+    display: inline-block;
+    vertical-align: top;
+    color: $pretty-black;
 
-}
- 
- 
-.footer-distributed .footer-links{
-	color:  $neongreen;
-	margin: 20px 0 12px;
-	padding: 0;
-}
- 
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-}
- 
-.footer-distributed .footer-company-name{
-	color: $neongreen;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
- 
- 
-.footer-distributed .footer-center{
-	width: 35%;
-}
- 
-.footer-distributed .footer-center i{
-    background-color: $neongreen; 
-	color: $lightgrey;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
- 
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
- 
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: $lightgrey;
-	vertical-align: middle;
-	margin:0;
-}
- 
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
- 
-.footer-distributed .footer-center p a{
-	color: $lightgrey;
-	text-decoration: none;;
-}
- 
-.footer-distributed .footer-right{
-    width: 20%;
-   }
- 
-  .footer-distributed{
-	line-height: 20px;
- 	color:  $lightgrey;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
-.footer-distributed .footer-company-about{
-	line-height: 20px;
- 	color:$lightgrey;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-} 
- 
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:$lightgrey;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
- 
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
- 
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color: $neongreen;
-	border-radius: 2px;
- 
-	font-size: 20px;
-	color: $lightgrey;
-	text-align: center;
-	line-height: 35px;
- 
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
- 
-@media (max-width: 880px) {
- 
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	
-	}
- 
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-		text-align: center;
-	}
- 
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-	.main {
-		line-height: normal;
-		font-size: auto;
+    .logo {
+      width: 300px;
+      //height: 50px;
+      padding-left: 5px;
+      img {
+        max-width: 100%;
+        max-height: auto;
+      }
     }
-    
-    
- 
+  }
+
+  .footer-center {
+    width: 40%;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    color: $pretty-black;
+    left: 0;
+
+    ul {
+      list-style-type: none;
+      span:nth-child(1) {
+        color: $neongreen;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .footer-right {
+    display: inline-block;
+
+    ul {
+      list-style-type: none;
+      a {
+        // font-size: 30px;
+        color: $neongreen;
+        span {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  footer {
+    position: relative;
+    .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    font: bold 14px sans-serif;
+    align-content: center;
+  }
+
+  .footer-distributed .footer-right {
+    display: none;
+  }
 }

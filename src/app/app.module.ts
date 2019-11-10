@@ -20,6 +20,7 @@ import { EnquiryComponent } from './pages/enquiry/enquiry.component';
 import { VehicleComponent } from './pages/vehicle/vehicle.component';
 import { OffersComponent } from './pages/offers/offers.component';
 import { RentalcarsComponent } from './pages/rentalcars/rentalcars.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { RentalcarsComponent } from './pages/rentalcars/rentalcars.component';
     EnquiryComponent,
     VehicleComponent,
     OffersComponent,
-    RentalcarsComponent
+    RentalcarsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
