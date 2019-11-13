@@ -7,9 +7,12 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactusComponent } from 'src/app/pages/contactus/contactus.component';
 import { AuthComponent } from 'src/app/layouts/auth/auth.component';
+import { BookingsModule } from 'src/app/pages/bookings/bookings.module'
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { CommonModule } from '@angular/common';
-import { BookingComponent } from './pages/booking/booking.component';
+import { from } from 'rxjs';
+import { BookingListComponent } from './pages/bookings/booking-list/booking-list.component';
+import { NewBookingComponent } from './pages/bookings/new-booking/new-booking.component';
 
 
 const routes: Routes = [
@@ -22,7 +25,8 @@ const routes: Routes = [
       {path:'register', component:RegisterComponent},
       {path:'about',component:AboutComponent},
       {path:'contactus',component:ContactusComponent},
-      {path: 'booking' , component:BookingComponent}
+      {path: 'add-booking', component: NewBookingComponent}
+     
     ]
 
   },
@@ -30,7 +34,11 @@ const routes: Routes = [
     path:'',
     component:AdminComponent,
     children:[
-     { path:'dashboard', component:DashboardComponent, pathMatch:'full'}
+     { path:'dashboard', component:DashboardComponent, pathMatch:'full'},
+     { path:'bookings', loadChildren: 'src/app/pages/bookings/bookings.module#BookingsModule'}
+     //{ path:'bookings/list-booking', component:BookingListComponent, pathMatch:'full'},
+    
+    
        ]
   },
   { path: '**', redirectTo: '' }

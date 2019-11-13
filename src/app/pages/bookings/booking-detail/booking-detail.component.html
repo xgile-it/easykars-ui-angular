@@ -1,0 +1,49 @@
+<h3 mat-dialog-title>{{ title }}</h3>
+<mat-accordion class="example-headers-align">
+ 
+    <!-- Date Form inside Expansion Panel Date -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Dates
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-dates-form [form]="form"></app-dates-form>
+    </mat-expansion-panel>
+
+    <!-- Personal Form inside Expansion Panel Personal -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Personal
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-personal-form [form]="form"></app-personal-form>
+    </mat-expansion-panel>
+
+    <!-- Payment Form inside Expansion Panel Payment -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Payment
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-payment-form [form]="form"></app-payment-form>
+    </mat-expansion-panel>
+
+    <!-- Terms Form inside Expansion Panel terms -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Terms
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-terms-form [form]="form"></app-terms-form>
+    </mat-expansion-panel>
+    
+    <div class="top-15" align="end">
+        <button mat-raised-button (click)="close()">Close</button> 
+        <button class="btn-success" mat-raised-button [disabled]="!form.valid || !form.dirty" (click)="save()">Save</button>
+    </div>
+
+</mat-accordion>

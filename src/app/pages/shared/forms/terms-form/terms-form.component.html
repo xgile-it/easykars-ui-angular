@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <div class="example-full-width">
+    <mat-form-field class="example-checkbox-group" >
+        <input matInput placeholder="" style="display:none" formControlName="agree">
+        <mat-checkbox class="example-checkbox-button" formControlName="agree" value="agree">I agree to The Terms and Conditions
+    <!--<button color="accent"  matTooltip="View Terms and Conditions"
+     value="Show the Popup" (click)="open()" aria-label="view terms and conditions">View terms and conditions</button>-->
+     <button type="button" value="Show the Popup" (click)="open()" class="btn btn-link">View terms and conditions</button>
+    </mat-checkbox>
+ </mat-form-field>
+ </div>
+</form>

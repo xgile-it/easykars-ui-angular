@@ -1,0 +1,17 @@
+<div class="col-md-6">
+<form [formGroup]="form">
+    <div class="form-group">
+        <label class="control-label" for="picker1">Pickup Date</label> 
+        <input class="form-control" [matDatepicker]="picker1" formControlName="pickupDate" required > 
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 color="primary"></mat-datepicker>
+    </div>
+    <div class="form-group">
+      
+        <label class="control-label" for="picker2">Pickup Date</label> 
+        <input class="form-control" [matDatepicker]="picker2" formControlName="dropoffDate" required > 
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2 color="primary"></mat-datepicker>
+    </div>
+</form>
+</div>

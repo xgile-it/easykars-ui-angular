@@ -1,0 +1,13 @@
+<h4>Here is the copy of your booking details:</h4>
+<h4>Name: </h4>
+    {{ formData.firstName + ' ' + formData.lastName }}
+<h4>Contact Details: </h4>
+    {{ formData.emailId + ' ' + formData.contactNo }}
+<h4>Address: </h4>
+    {{formData.address}}
+<h4>Payment Details: </h4>
+    {{formData.cardHolder}}
+<br />
+    {{formData.cardNo + ' ' + formData.expiryDate + ' ' + formData.cvv}}
+<h4>Terms and Conditions: </h4>
+    {{formData.agree}}

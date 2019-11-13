@@ -1,0 +1,24 @@
+<div class="col-md-6">
+    <form [formGroup]="form">
+    <div class="example-full-width">
+        <label class="control-label" for="firstName">First Name</label>
+        <input class="form-control"  formControlName="firstName" required>
+    </div>
+    <div class="example-full-width">
+        <label class="control-label" for="lastName">Last Name</label>
+        <input class="form-control"  formControlName="lastName" required>
+    </div>
+    <div class="example-full-width">
+        <label class="control-label" for="address">Address</label>
+        <input class="form-control" formControlName="address" required>
+    </div>
+    <div class="example-full-width">
+      <label class="control-label" for="contactNo">Contact No</label>
+        <input class="form-control"  formControlName="contactNo" required>
+    </div>
+    <div class="example-full-width">
+        <label class="control-label" for="emailId">Email</label>
+        <input class="form-control" type="email" formControlName="emailId" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$">
+    </div>
+</form>
+</div>

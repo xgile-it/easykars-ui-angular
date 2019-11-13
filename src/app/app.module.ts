@@ -15,17 +15,18 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
-import { BookingComponent } from './pages/booking/booking.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { NgbdModalComponent } from './pages/booking/modal-components';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from './pages/core/core.module';
+import { NewBookingComponent } from './pages/bookings/new-booking/new-booking.component';
+import { MaterialFormsModule } from './pages/shared/forms/material-forms.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookingComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
@@ -36,8 +37,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     RegisterComponent,
     AboutComponent,
-    ContactusComponent
-    //NgbdModalComponent
+    ContactusComponent,
+    NewBookingComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatMenuModule, 
     MatToolbarModule, 
     MatIconModule, 
-    MatSidenavModule, 
+    MatSidenavModule,
+    CoreModule, 
+    MaterialFormsModule,
     MatListModule, NgbModule, FormsModule
   
   ],
