@@ -18,11 +18,13 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { NgbdModalComponent } from './pages/booking/modal-components';
 import { MaterialModule } from './material.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './pages/core/core.module';
 import { NewBookingComponent } from './pages/bookings/new-booking/new-booking.component';
 import { MaterialFormsModule } from './pages/shared/forms/material-forms.module';
+import { AlertComponent } from './pages/alert';
+import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './pages/helpers';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,10 @@ import { MaterialFormsModule } from './pages/shared/forms/material-forms.module'
     RegisterComponent,
     AboutComponent,
     ContactusComponent,
-    NewBookingComponent
+    NewBookingComponent,
+    LoginComponent,
+    RegisterComponent,
+    AlertComponent
    
   ],
   imports: [
@@ -59,7 +64,11 @@ import { MaterialFormsModule } from './pages/shared/forms/material-forms.module'
     MatListModule, NgbModule, FormsModule
   
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+  ],// provider used to create fake backend
+    //fakeBackendProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,13 +2,14 @@
   <nav>
       <ul>
       
-        <a href="#" routerlink="\dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
-        <a href="#" routerlink="\cars" routerLinkActive="active"><i class="fa fa-car" aria-hidden="true"></i>Vehicles</a>
-        <a href="#"  routerlink="\profile" routerLinkActive="active"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
-        <a href="#" routerlink="\users" routerLinkActive="active"><i class="fa fa-users" aria-hidden="true"></i>Users</a>
-        <a href="#" routerlink="\payments" routerLinkActive="active"><i class="fa fa-credit-card" aria-hidden="true"></i>Payments</a>
-  <!--<a href="#"  routerlink="/bookings" routerLinkActive="active"><i class="fa fa-book" aria-hidden="true"></i>Bookings</a>-->
+        <a href="#" routerLink="/dashboard" routerLinkActive="active"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+        <a href="#" routerLink="/cars" routerLinkActive="active"><i class="fa fa-car" aria-hidden="true"></i>Vehicles</a>
+        <a href="#" routerLink="/profile" routerLinkActive="active"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+        <a href="#" routerLink="/users" routerLinkActive="active"><i class="fa fa-users" aria-hidden="true"></i>Users</a>
+        <a href="#" routerLink="/payments" routerLinkActive="active"><i class="fa fa-credit-card" aria-hidden="true"></i>Payments</a>
         <a href="#" routerLink="/bookings" routerLinkActive="active"><i class="fa fa-book" aria-hidden="true"></i>Bookings</a>
+        <a class="nav-item nav-link" (click)="logout()"><i class="fa fa-user" aria-hidden="true"></i>Logout</a>
+   
       </ul>
-    </nav>
+       </nav>
      </section>
