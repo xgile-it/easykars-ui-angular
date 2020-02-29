@@ -14,6 +14,10 @@ import { EnquiryComponent } from "./pages/enquiry/enquiry.component";
 import { OffersComponent } from "./pages/offers/offers.component";
 import { RentalcarsComponent } from "./pages/rentalcars/rentalcars.component";
 import { ProfileComponent } from "./pages/profile/profile.component";
+import { AuthGuard } from "src/app/_guards/auth.guard";
+import { AddcarComponent } from "./pages/addcar/addcar.component";
+import { UsersComponent } from "./pages/users/users.component";
+import { BookingComponent } from "./pages/booking/booking.component";
 
 const routes: Routes = [
   {
@@ -21,11 +25,10 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       { path: "", component: HomeComponent, pathMatch: "full" },
-      { path: "login", component: LoginComponent },
-      { path: "register", component: RegisterComponent },
+
       { path: "about", component: AboutComponent },
       { path: "contactus", component: ContactusComponent },
-      { path: "vehicle", component: VehicleComponent },
+
       { path: "enquiry", component: EnquiryComponent },
       { path: "offers", component: OffersComponent },
       { path: "rentalcars", component: RentalcarsComponent }
@@ -35,10 +38,26 @@ const routes: Routes = [
     path: "",
     component: AdminComponent,
     children: [
-      { path: "dashboard", component: DashboardComponent, pathMatch: "full" },
-      { path: "profile", component: ProfileComponent }
+      {
+        path: "dashboard",
+        component: DashboardComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: "profile",
+        component: ProfileComponent
+      },
+
+      { path: "vehicle", component: VehicleComponent },
+      { path: "users", component: UsersComponent },
+      { path: "booking", component: BookingComponent },
+      { path: "addcar", component: AddcarComponent },
+      { path: "**", redirectTo: "dashboard" }
     ]
   },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
+
   { path: "**", redirectTo: "" }
 ];
 

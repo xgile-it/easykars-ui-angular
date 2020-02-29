@@ -1,0 +1,125 @@
+<div class="container-fluid" style="margin-top: 5%">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Car_Make</th>
+        <th>Car_Modal</th>
+        <th>Year</th>
+        <th>Transmission</th>
+        <th>Body Type</th>
+        <th>Fuel_Type</th>
+        <th>Color</th>
+        <th>Kilometer</th>
+        <th>Price</th>
+        <th>Purchase Date</th>
+        <th>Vin No.</th>
+        <th>Registration_No</th>
+        <th>Licence No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dynamic of dynamicArray; let i = index">
+        <td (click)="deleteRow(i)">
+          <i class="fa fa-trash fa-2x"></i>
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].make"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].model"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].year"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].transmission"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].bodyType"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].fuelType"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].color"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].kilometers"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].price"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].perchesDate"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].vinNumber"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].registrationNumber"
+            class="form-control"
+            type="text"
+          />
+        </td>
+        <td>
+          <input
+            [(ngModel)]="dynamicArray[i].licenceNumber"
+            class="form-control"
+            type="text"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td (click)="addRow(i)">
+          <i class="fa fa-plus fa-2x"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
